@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>barang</title>
+</head>
+<body>
+	<h1>Ini Barang</h1>
+	<a href="/insert_barang">insert</a>
+	<br><br>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Nama Barang</th>
+				<th>Harga Barang</th>
+				<th>option</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for i in barang %}
+			<tr>
+				<td>{{loop.index}}</td>
+				<td>{{i.nama_barang}}</td>
+				<td>{{i.harga_barang}}</td>
+				<td><a href="/delete_barang/{{i.id}}">Delete</a> <a href="/update_barang/{{i.id}}">Update</a></td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+</body>
+</html>

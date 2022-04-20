@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Update Barang</title>
+</head>
+<body>
+	<form method="POST" action="/update_barang/{{barang.id}}">
+		<label>Nama Barang</label>
+		<input type="text" name="nama_barang" value="{{barang.nama_barang}}"><br><br>
+		<label>Harga Barang</label>
+		<input type="number" name="harga_barang" value="{{barang.harga_barang}}"><br>
+		<button>Submit!</button>
+	</form>
+
+</body>
+</html>
